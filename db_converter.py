@@ -53,6 +53,7 @@ def parse(input_filename, output_filename):
     output.write("START TRANSACTION;\n")
     output.write("SET standard_conforming_strings=off;\n")
     output.write("SET escape_string_warning=off;\n")
+    output.write("SET timezone = 'UTC';\n")
     output.write("SET CONSTRAINTS ALL DEFERRED;\n\n")
 
     for i, line in enumerate(input_fh):
